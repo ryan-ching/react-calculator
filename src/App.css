@@ -2,50 +2,74 @@
   font-family: sans-serif;
 }
 
-body {
+body,
+html {
+  background-color: beige;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 h1 {
   text-align: center;
 }
-input,
-button {
-  font-size: 2rem;
-  padding: auto;
-  border-radius: 5px;
-}
-input {
-  display: block;
+
+h2 {
   text-align: center;
-  margin: 0 auto;
-}
-button {
-  border: 1px solid gray;
-  background: whitesmoke;
-  margin-right: 5px;
 }
 
-p {
+.fields {
+  font-size: 4vh;
+  padding: auto;
+  justify-content: center;
+  margin: 5vh auto;
   text-align: center;
-  font-size: 2rem;
+}
+
+.fields input {
+  font-size: 4vh;
+  padding: auto;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  margin: 5vh auto;
+  background-color: beige;
+  border-radius: 5px;
+}
+
+.fields p {
+  text-align: center;
   border: 1px solid black;
 }
 
 .all-buttons {
   display: grid;
   grid-template-columns: repeat(4, 0fr);
+  height: 50vh;
+  width: 50vh;
+  justify-content: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   gap: 0rem;
+  background-color: rgb(236, 236, 189);
 }
 
 .all-buttons button {
+  font-size: 2rem;
+  padding: auto;
+  border: 0.1vh solid gray;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 10vh;
+  height: 10vh;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: whitesmoke;
 }
 
 .all-buttons button:nth-last-child(3),

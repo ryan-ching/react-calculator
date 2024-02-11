@@ -34,6 +34,8 @@ function App() {
         e.preventDefault();
         inputRef.current.value = "";
         setResult((result) => 0);
+      } else if (e.keyCode === 8 || e.key === "Backspace" || e.which === 8) {
+        inputRef.current.value = "";
       }
     };
     document.addEventListener("keypress", handleKeyPress);
@@ -83,10 +85,11 @@ function App() {
         <h1>Calculator</h1>
       </div>
       <form>
-        <h2>Input</h2>
-        <input ref={inputRef} type="text" />
-        <h2>Result</h2>
-        <p ref={resultRef}>{result}</p>
+        <div className="fields">
+          <input ref={inputRef} type="text" placeholder="Input" />
+          <p ref={resultRef}>{result}</p>
+        </div>
+
         <div className="all-buttons">
           <button onClick={(e) => append(7, e)}>7</button>
           <button onClick={(e) => append(8, e)}>8</button>
